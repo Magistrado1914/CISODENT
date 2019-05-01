@@ -1,0 +1,7 @@
+<h1><?php if(isset($this->Mensaje)) echo $this->Mensaje; ?></h1>
+<a href="<?php echo BASE_URL; ?>">página de Inicio.</a> |
+<a href="javascript:history.back(1)">Volver.</a>
+
+<?php if(!Session::Mstrr('autenticado')): ?>
+<a href="<?php echo BASE_URL . 'iniciarsesion'; ?>">Iniciar Sesión.</a>
+<?php endif; ?>

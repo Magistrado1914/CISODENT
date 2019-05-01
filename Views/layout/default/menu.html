@@ -1,0 +1,343 @@
+<div id="DIV_33">
+        <link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-blue" id="LINK_34" />
+        <link type="text/css" rel="stylesheet" href="/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" id="LINK_35" />
+        <script type="text/javascript" id="SCRIPT_36">if(window.PrimeFaces){PrimeFaces.settings.locale='es';}
+        </script>
+        <meta charset="utf-8" id="META_37" />
+        <script type="text/javascript" id="SCRIPT_38">var mins = 1; 
+             var secs = mins * 60;
+             var currentSeconds = 0;
+             var currentMinutes = 0;
+            var t = false;
+    
+               jQuery(document).ready(function() {
+    
+                      mins = $('#frmTimeOut\\:tExpira').val(); 
+                   secs = mins * 60;
+    
+                       $(document).click(function(e) {
+                           mins = $('#frmTimeOut\\:tExpira').val(); 
+                              secs = mins * 60;
+                              currentSeconds = 0;
+                              currentMinutes = 0;
+                       });	   		
+             });
+    
+    
+            function startTemporizador(){
+    
+                if(t){
+                    document.getElementById('capaT').innerHTML="00:00";
+                    PF('sessionTimeOutDialog').show();								
+                }else{
+    
+                    secs--;
+                    if(secs == 0){t = true;}
+    
+                    currentMinutes = Math.floor(secs / 60);
+                    currentSeconds = secs % 60;
+                    
+                    if(!(currentSeconds > 9)){
+                        currentSeconds = "0" + currentSeconds; 
+                    }
+                                
+                    document.getElementById("capaT").innerHTML = currentMinutes + ":" + currentSeconds; 
+    
+                    if(parseInt(currentMinutes)==0  && parseInt(currentSeconds) < 31){
+                           document.getElementById("capaT").style.color = '#EB5A5C';
+                    }else {
+                           document.getElementById("capaT").style.color = '#173754';
+                    }
+    
+                    contar_tc = setTimeout('startTemporizador()',1000);
+    
+                }
+            }
+            </script>
+        <form id="FORM_39" name="frmTimeOut" method="post" action="/index.xhtml" enctype="application/x-www-form-urlencoded">
+                    <input type="hidden" name="frmTimeOut" value="frmTimeOut" id="INPUT_40" />
+                    <div id="DIV_41">
+                        <div id="DIV_42">
+                            <span id="SPAN_43">Observación:</span>
+                        </div>
+                        <div id="DIV_44">
+                            <div id="DIV_45">
+                                <div id="DIV_46">
+                                    <label id="LABEL_47">
+                                        Su sesión en el sistema ha caducado por inactividad.
+                                    </label>
+                                    <p id="P_48">
+                                    </p>
+                                    <button id="BUTTON_49" name="frmTimeOut:j_idt20" type="submit">
+                                        <span id="SPAN_50"></span><span id="SPAN_51">Aceptar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input id="INPUT_52" type="hidden" name="frmTimeOut:tExpira" value="5" />
+                    <input type="hidden" name="javax.faces.ViewState" id="INPUT_53" value="8105055528176155295:-5434455782915668353" />
+                </form>
+        <div id="DIV_54">
+                    <div id="DIV_55">
+                        <div id="DIV_56">
+                            <a id="A_57" href="#"><img src="/javax.faces.resource/images/logo-fixed-1.png.xhtml?ln=ultima-layout" id="IMG_58" alt='' /></a>
+                        </div>
+                    </div>
+                    <div id="DIV_59">
+                         <a id="A_60" href="#"><i id="I_61"></i></a> <a id="A_62" href="#"><i id="I_63"></i></a>
+                        <div id="DIV_64">
+                            <div id="DIV_65">
+                                <b id="B_66">Cisodent</b> <span id="SPAN_67"><span id="SPAN_68">BIENVENIDO: <em id="EM_69">ESTEVES PONCE BRAYAN</em></span> | <em id="EM_70">SEDE PRO - LOS OLIVOS</em></span>
+                            </div>
+                        </div>
+                        <ul id="UL_71">
+                            <span id="SPAN_72"></span>
+                            <div id="DIV_73">
+                                Tu sesión finalizará en: <span id="SPAN_74">1:53</span>
+                            </div> <a id="A_75" href="#"><i id="I_76"></i></a>
+                        </ul>
+                    </div>
+                </div>
+        <div id="DIV_77">
+                    <div id="DIV_78">
+                        <div id="DIV_79">
+                            <div id="DIV_80">
+                                <div id="DIV_81">
+                                    Wednesday
+                                </div>
+                                <div id="DIV_82">
+                                    Jan 26
+                                </div>
+                            </div>
+                            <div id="DIV_83">
+                                <h1 id="H1_84">
+                                    Weather
+                                </h1>
+                                <h2 id="H2_85">
+                                    New York, USA
+                                </h2>
+                                <div id="DIV_86">
+                                     <span id="SPAN_87">21℃</span><img id="IMG_88" src="/javax.faces.resource/images/dashboard/weather-icon-2.svg.xhtml?ln=ultima-layout" alt="" width="60" />
+                                </div>
+                                <ul id="UL_89">
+                                    <li id="LI_90">
+                                        Thursday<img id="IMG_91" src="/javax.faces.resource/images/dashboard/weather-icon-1.svg.xhtml?ln=ultima-layout" alt="" /> <span id="SPAN_92">24</span>
+                                    </li>
+                                    <li id="LI_93">
+                                        Friday<img id="IMG_94" src="/javax.faces.resource/images/dashboard/weather-icon-3.svg.xhtml?ln=ultima-layout" alt="" /> <span id="SPAN_95">19</span>
+                                    </li>
+                                    <li id="LI_96">
+                                        Saturday<img id="IMG_97" src="/javax.faces.resource/images/dashboard/weather-icon-4.svg.xhtml?ln=ultima-layout" alt="" /> <span id="SPAN_98">15</span>
+                                    </li>
+                                    <li id="LI_99">
+                                        Sunday<img id="IMG_100" src="/javax.faces.resource/images/dashboard/weather-icon-1.svg.xhtml?ln=ultima-layout" alt="" /> <span id="SPAN_101">24</span>
+                                    </li>
+                                    <li id="LI_102">
+                                        Monday<img id="IMG_103" src="/javax.faces.resource/images/dashboard/weather-icon-2.svg.xhtml?ln=ultima-layout" alt="" /> <span id="SPAN_104">21</span>
+                                    </li>
+                                    <li id="LI_105">
+                                        Tuesday<img id="IMG_106" src="/javax.faces.resource/images/dashboard/weather-icon-3.svg.xhtml?ln=ultima-layout" alt="" /> <span id="SPAN_107">20</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <form id="FORM_108" name="menuform" method="post" action="/index.xhtml" enctype="application/x-www-form-urlencoded">
+                    <input type="hidden" name="menuform" value="menuform" id="INPUT_109" />
+                    <div id="DIV_110">
+                        <div id="DIV_111">
+                            <div id="DIV_112">
+                                <ul id="UL_113">
+                                </ul>
+                                <ul id="UL_114">
+                                    <li id="LI_115">
+                                        <a href="#" id="A_116"><span id="SPAN_117">ADMISION Y CITAS</span><span id="SPAN_118"></span><i id="I_119"></i></a>
+                                        <ul id="UL_120">
+                                            <li id="LI_121">
+                                                <a href="/paginas/admcit/bandejaProspectosCentralizada.xhtml" id="A_122"><span id="SPAN_123">Registro Prospecto</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="LI_124">
+                                        <a href="#" id="A_125"><span id="SPAN_126">SEGURIDAD</span><span id="SPAN_127"></span><i id="I_128"></i></a>
+                                        <ul id="UL_129">
+                                            <li id="LI_130">
+                                                <a href="/paginas/seguri/bandejaPerfil.xhtml" id="A_131"><span id="SPAN_132">Perfil</span></a>
+                                            </li>
+                                            <li id="LI_133">
+                                                <a href="/paginas/seguri/bandejaOpcionSistema.xhtml" id="A_134"><span id="SPAN_135">Opciones Sistema</span></a>
+                                            </li>
+                                            <li id="LI_136">
+                                                <a href="/paginas/seguri/bandejaUsuario.xhtml" id="A_137"><span id="SPAN_138">Usuario</span></a>
+                                            </li>
+                                            <li id="LI_139">
+                                                <a href="/paginas/seguri/bandejaPerfilOpcion.xhtml" id="A_140"><span id="SPAN_141">Perfil Opcion</span></a>
+                                            </li>
+                                            <li id="LI_142">
+                                                <a href="/paginas/seguri/cambiarPassword.xhtml" id="A_143"><span id="SPAN_144">Cambiar Clave</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="DIV_145">
+                                <div id="DIV_146">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="javax.faces.ViewState" id="INPUT_147" value="8105055528176155295:-5434455782915668353" />
+                </form>
+        <div id="DIV_148">
+                    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css.xhtml?ln=primefaces-ultima-blue" id="LINK_149" />
+                    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/fa/font-awesome.css.xhtml?ln=primefaces&amp;v=6.0" id="LINK_150" />
+                    <script type="text/javascript" id="SCRIPT_151">if(window.PrimeFaces){PrimeFaces.settings.locale='es';}
+                    </script>
+                    <link rel="stylesheet" type="text/css" href="/recursos/css/common.css" id="LINK_152" />
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" id="LINK_153" />
+                    <style type="text/css" id="STYLE_154">.carousel-inner {
+                        height: 350px;
+                    }
+    
+                    .layout-wrapper .layout-main {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+    
+                    a {
+                        color: #da2020;
+                    }
+    
+                    a:hover {
+                        color: #d6f300;
+                    }
+    
+                    .wrap > h1 {
+                        margin: 26px auto;
+                    }
+    
+                    #showcase {
+                        height: 204px;
+                    }
+    
+                    #item-title {
+                        text-align: center;
+                        margin-top: 30px;
+                        margin-bottom: 22px;
+                        color: #0651A8;
+                        font-size: 9pt;
+                        font-weight: bold;
+                        font-family: Tahoma;
+                    }
+    
+                    #nav {
+                        text-align: center;
+                    }
+    
+                    #nav > button {
+                        width: 64px;
+                        height: 36px;
+                        color: #666;
+                        font: bold 16px arial;
+                        text-align: center;
+                        margin: 5px;
+                        text-shadow: 0px 1px 0px #f5f5f5;
+                        background: #f6f6f6;
+                        border: solid 2px rgba(0, 0, 0, 0.4);
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+                        -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+                        -moz-box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+                        box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.4);
+                        cursor: pointer;
+                    }
+    
+                    #nav > button:active,
+                    #nav > button.down {
+                        background: #dfdfdf;
+                        border: solid 2px rgba(0, 0, 0, 0.6);
+                        box-shadow: none;
+                    }
+    
+                    #share {
+                        top: -9px;
+                    }
+    
+                    #credits {
+                        top: -15px;
+                    }
+    
+                    .label {
+                        color: #2779AA;
+                        font-size: 9pt;
+                        font-weight: bold;
+                        font-size: 9pt;
+                        font-family: Tahoma;
+                        text-align: center
+                    }
+                        </style>
+                    <form id="FORM_155" name="j_idt55" method="post" action="/index.xhtml" enctype="application/x-www-form-urlencoded">
+                                <input type="hidden" name="j_idt55" value="j_idt55" id="INPUT_156" />
+                                <div id="DIV_157">
+                                    <div id="DIV_158">
+                                    </div>
+                                    <div id="DIV_160">
+                                            <ul id="UL_161">
+                                                <li id="LI_162">
+                                                     <a href="#" id="A_163">Gestión de Programación<i id="I_164"></i></a>
+                                                </li>
+                                                <li id="LI_165">
+                                                     <a href="#" id="A_166">Gestión de Pacientes<i id="I_167"></i></a>
+                                                </li>
+                                                <li id="LI_168">
+                                                     <a href="./paginas/admcit/bandejaProspectosCentralizada.xhtml" id="A_169">Gestión de Prospectos<i id="I_170"></i></a>
+                                                </li>
+                                                <li id="LI_171">
+                                                     <a href="#" id="A_172">Reportes<i id="I_173"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <div id="DIV_174">
+                                        <div id="DIV_175">
+                                            <div id="DIV_176">
+                                                <div id="DIV_177">
+                                                    <span id="SPAN_178">SOPORTE</span>
+                                                </div>
+                                                <div id="DIV_179">
+                                                    <ul id="UL_180">
+                                                        <li id="LI_181">
+                                                             <span id="SPAN_182"><b id="B_183">Soporte usuario:</b> +51 954304539 - +51 990828982</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="javax.faces.ViewState" id="INPUT_184" value="8105055528176155295:-5434455782915668353" />
+                            </form>
+                    
+                    
+                </div>
+        <div id="DIV_187">
+                                    <div id="DIV_188">
+                                        <div id="DIV_189">
+                                             <span id="SPAN_190">INGENIERIA PERUANA DE SOFTWARE S.A.C</span> <span id="SPAN_191">Cisodent v1.0</span> <span id="SPAN_192"><span id="SPAN_193"></span> <span id="SPAN_194">Todos los derechos reservados | www.condesi.pe | www.ipersoftperu.com |</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+    </div>
+    <div id="DIV_195">
+                                <div id="DIV_196">
+                                    <i id="I_197"></i>
+                                </div>
+                                <div id="DIV_198">
+                                </div>
+                            </div>
+    <div id="DIV_199">
+                            </div>
+    <div id="DIV_200">
+                            </div>

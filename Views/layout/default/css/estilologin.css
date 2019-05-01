@@ -1,0 +1,199 @@
+*, ::after, ::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+  	background: #36B8E9 url("../../recursos/imagenes/fondoPrincipal4.jpg")no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	font-family: 'Lato';
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	color: #444;
+}
+body::before {
+  z-index: -1;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,62,131,.8);
+  width: 100%;
+  height: 100%;
+}
+#form{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+}
+.login-box{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	width: 100%;
+	max-width: 800px;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.login-box .login-info,
+.login-box .login-form{
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.login-box .login-info{
+	justify-content: center;
+	align-items: center;
+	background-color: #01b1ec;
+	min-height: 200px;
+}
+.login-box .login-form{
+	background-color: #fff;
+	justify-content: center;
+}
+.login-header{
+	margin-bottom: 2rem;
+}
+.form-group{
+	margin-bottom: 1rem;
+}
+.form-group label{
+	font-weight: 500;
+	margin-bottom: .5rem;
+	display: block;
+	font-size: 15px;
+}
+.input-group{
+	position: relative;
+}
+.input-group i{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 20px;
+	text-align: center;
+	font-style: 18px;
+}
+.ui-selectonemenu,
+.form-control{
+	display: block;
+	width: 100%;
+	font-size: 14px !important;
+	line-height: 1.5;
+	color: #444;
+	padding: .375rem !important;
+	background-color: #fff;
+	background-clip: padding-box;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	border: 1px solid #aeb0b5 !important;
+	-moz-transition: border-color 0.3s, box-shadow 0.3s;
+	-o-transition: border-color 0.3s, box-shadow 0.3s;
+	-webkit-transition: border-color 0.3s, box-shadow 0.3s;
+	transition: border-color 0.3s, box-shadow 0.3s;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	height: 35px;
+	line-height: 1;
+	font-family: 'Lato' !important;
+}
+.form-control{
+	padding: .375rem 0 .375rem 40px !important;
+}
+.ui-selectonemenu:after{
+	content: "\f107";
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 14px;
+	font-family: FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 900;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 18px;
+}
+
+.ui-selectonemenu.ui-state-focus,
+.form-control.ui-state-focus{
+	outline: 0;
+    border-color: #0071bc !important;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 112, 210, 0.35);
+    -webkit-box-shadow: 0 0 5px rgba(0, 112, 210, 0.35);
+    -moz-box-shadow: 0 0 5px rgba(0, 112, 210, 0.35);
+}
+.ui-selectonemenu-panel .ui-selectonemenu-filter-container{
+	width: 100%;
+}
+.ui-icon-search:before{
+	content: "\f002";
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 14px;
+	font-family: FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	top: 2px;
+	font-size: 18px;
+	left: 5px;
+}
+.text-right{
+	text-align: right;
+}
+.forgot-password{
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+.forgot-password a{
+	text-decoration: none;
+	color: #01b1ec;
+	transition: all .4s ease;
+}
+.forgot-password a:hover{
+	color: #4b74b3;
+}
+.mt-1{
+	margin-top: 1rem;
+}
+.ui-state-active {
+    background-color: #01b1ec !important;
+    color: #fff !important;
+}
+.ui-button{
+  	font-family: 'Lato' !important;
+}
+@media (min-width: 768px){
+	.login-box .login-info,
+	.login-box .login-form{
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 2rem 3.5rem;
+	}	
+	.login-box .login-form{
+		min-height: 450px;
+	}
+}
+@media (max-width: 340px){
+	.login-box .login-info img{
+		width: 100%;
+	}
+}

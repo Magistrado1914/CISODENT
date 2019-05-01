@@ -1,0 +1,27 @@
+<div id="login-box">
+      <div class="left-box">
+        <h1> Registrarse</h1>
+        <form method="post" action="">
+          <input type="hidden" name="registrarse" value="1"/>
+          <input type="text" class="R-Usuario" name="Usuario" placeholder="Usuario" value="<?php if(isset($this->Datos['Usuario'])) echo $this->Datos['Usuario']; ?>"/>
+          <input type="text" class="R-Correo" name="Correo" placeholder="Correo" value="<?php if(isset($this->Datos['Correo'])) echo $this->Datos['Correo']; ?>"/>
+          <input type="password" class="R-Contrasena" name="Contrasena" placeholder="Contraseña"/>
+        
+          <input type="password" class="R-Verficacion" name="Verificacion" placeholder="Reingresar su contraseña"/>
+        
+          <input type="submit" class="R-Registrarse" name="signup-button" value="Registrarse"/>
+      </form>
+        
+        </div>
+        <div class="right-box">
+          <span class="signinwith">Registrarse<br/>con su Red Social     </span>
+        
+        <button class="social facebook">Registrarse con Facebook</button>    
+        <button class="social twitter">Registrarse con Twitter</button> 
+        <button class="social google">Registrarse con Google+</button> 
+            
+        
+        </div>
+        <div class="or">Ó</div>
+        </div>
+      </div>

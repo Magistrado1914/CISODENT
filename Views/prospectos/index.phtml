@@ -1,0 +1,168 @@
+<!-- ########## START: MAIN PANEL ########## -->
+<div class="br-mainpanel">
+      <div class="br-pageheader">
+        
+      </div><!-- br-pageheader -->
+      <div class="br-pagetitle">
+        <i class="icon icon ion-ios-bookmarks-outline"></i>
+        <div>
+          <h4>Prospectos</h4>
+        </div>
+      </div><!-- d-flex -->
+      
+        <div class="pd-y-30 tx-center">
+          <a href="" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-toggle="modal" data-target="#modaldemo3">Registrar Prospectos</a>
+        </div><!-- pd-y-30 -->
+<?php if(isset($this->Prospectos) && count($this->Prospectos)): ?>
+      <div class="br-pagebody">
+        <div class="br-section-wrapper">
+          <div class="table-wrapper">
+            <table id="datatable1" class="table display responsive nowrap">
+              <thead>
+                <tr>
+                  <th class="wd-15p">Sede</th>
+                  <th class="wd-15p">Nro.Pros</th>
+                  <th class="wd-20p">Nombres</th>
+                  <th class="wd-15p">Sexo</th>
+                  <th class="wd-10p">Celular</th>
+                  <th class="wd-25p">Origen</th>
+                  <th class="wd-25p">Servicio</th>
+                  <th class="wd-25p">Observación</th>
+                  <th class="wd-25p">Asistencia</th>
+                  <th class="wd-25p">Fecha de Registro</th>
+                  <th class="wd-25p">Usu.Regist</th>
+                  <th class="wd-25p">Est.Reg</th>
+                  <th class="wd-25p">Acciones</th>
+                  <th class="wd-15p">¿Asistio?</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+              <?php for($i = 0; $i < count($this->Prospectos); $i++): ?>
+                <tr>
+                  <td><?php echo $this->Prospectos[$i]['cod_empresa']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['num_pros']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['nombres']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['flg_sexo']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['tel_cel']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['cod_tip_ori']; ?></td>
+                  <td><?php //echo $this->Prospectos[$i]['cod_empresa']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['observa']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['flg_asisten']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['fec_reg']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['usr_reg']; ?></td>
+                  <td><?php echo $this->Prospectos[$i]['est_reg']; ?></td>
+                  <td><button class="btn btn-primary">Modificar</button> | <button class="btn btn-primary">Eliminar</button></td>
+                  <td><button class="btn btn-oblong btn-primary">Sí</button> | <button class="btn btn-oblong btn-primary">NO</button></td>
+                </tr>
+                <?php endfor; ?>
+              </tbody>
+              
+            </table>
+          </div><!-- table-wrapper -->
+
+        </div><!-- br-section-wrapper -->
+      </div><!-- br-pagebody -->
+      <?php endif; ?>
+    </div><!-- br-mainpanel -->
+    <!-- ########## END: MAIN PANEL ########## -->
+
+    <!-- LARGE MODAL -->
+    <div id="modaldemo3" class="modal fade">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content tx-size-sm">
+                <div class="modal-header pd-x-20">
+                  <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Message Preview</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="row mg-t-80">
+            <div class="col-xl-6">
+              <div class="form-layout form-layout-4">
+                
+                <div class="row">
+                  <label class="col-sm-4 form-control-label">Sede: <span class="tx-danger">*</span></label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                  <select class="form-control select2" data-placeholder="Selecciona sede">
+                    <option label="Selecciona sede"></option>
+                    <option value="USA">United States of America</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                  </select>
+                  </div>
+                </div><!-- row -->
+                <div class="row mg-t-20">
+                  <label class="col-sm-4 form-control-label">Nombre: <span class="tx-danger">*</span></label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                    <input type="text" class="form-control" placeholder="Enter lastname">
+                  </div>
+                </div>
+                <div class="row mg-t-20">
+                  <label class="col-sm-4 form-control-label">Apellido Materno: <span class="tx-danger">*</span></label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                    <input type="text" class="form-control" placeholder="Enter email address">
+                  </div>
+                </div>
+                <div class="row mg-t-20">
+                  <label class="col-sm-4 form-control-label">Tipo de Campaña: <span class="tx-danger">*</span></label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                  <select class="form-control select2" data-placeholder="Tipo de Campaña">
+                    <option label="Selecciona sede"></option>
+                    <option value="USA">United States of America</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                  </select>
+                  </div>
+                </div>
+                
+              </div><!-- form-layout -->
+            </div><!-- col-6 -->
+            <div class="col-xl-6 mg-t-20 mg-xl-t-0">
+              <div class="form-layout form-layout-5">
+                
+                <div class="row">
+                  <label class="col-sm-4 form-control-label"><span class="tx-danger">*</span> Celular Whatsapp:</label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                    <input type="text" class="form-control" placeholder="Enter firstname">
+                  </div>
+                </div><!-- row -->
+                <div class="row mg-t-20">
+                  <label class="col-sm-4 form-control-label"><span class="tx-danger">*</span> Apellido Paterno:</label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                    <input type="text" class="form-control" placeholder="Enter lastname">
+                  </div>
+                </div>
+                <div class="row mg-t-20">
+                  <label class="col-sm-4 form-control-label"><span class="tx-danger">*</span> Sexo:</label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                  <label class="rdiobox rdiobox-pink">
+                    <input name="rdio" type="radio">
+                    <span>Femenino</span>
+                  </label>
+
+                  <label class="rdiobox rdiobox-primary">
+                    <input name="rdio" type="radio">
+                    <span>Masculino</span>
+                  </label>
+                  </div>
+                </div>
+                <div class="row mg-t-20">
+                  <label class="col-sm-4 form-control-label">Nota:</label>
+                  <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                    <textarea rows="2" class="form-control" placeholder="Enter your address"></textarea>
+                  </div>
+                </div><!-- row -->
+                
+              </div><!-- form-layout -->
+            </div><!-- col-6 -->
+          </div><!-- row -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary tx-size-xs">Registrar</button>
+                  <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div><!-- modal-dialog -->
+          </div><!-- modal -->
